@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#intro_Page {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: url("./intro_page_image.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+#Info {
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: linear-gradient(orange, white, green);
+  color: rgb(96, 3, 96);
+  position: absolute;
+  top: 0;
+}
+#startGame {
+  all: unset;
+  font-size: 40px;
+  padding: 10px 30px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  top: 67vh;
+}
+
+.body {
+  position: relative;
+  background: url("bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.board {
+  background: linear-gradient(green, blue, pink);
+  width: 86vmin;
+  height: 88vmin;
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: repeat(36, 1fr);
+  grid-template-rows: repeat(36, 1fr);
+}
+.IconsContainer {
+  display: none;
+  border: 2px solid black;
+  padding: 50px;
+  padding-left: 1px;
+  padding-right: 15px;
+  border-radius: 100%;
+  background: linear-gradient(black, gray);
+}
+.fontIcons {
+  position: relative;
+  margin-left: 30px;
+}
+.fontIcons i {
+  margin-right: 10px;
+  font-size: 30px;
+  color: antiquewhite;
+}
+#ArrowUp {
+  position: absolute;
+  top: -40px;
+  left: 50px;
+}
+.LRbtn {
+  display: flex;
+  gap: 50px;
+}
+#ArrowDown {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+.head {
+  background: linear-gradient(red, yellow);
+  border: 2px solid black;
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+.snake {
+  background: linear-gradient(aqua, green);
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.food {
+  background: linear-gradient(pink, brown);
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.scores {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  font-family: "Pacifico", cursive;
+  color: white;
+}
+#scoreBox {
+  color: cyan;
+}
+#hiscoreBox {
+  color: red;
+}
+#restart {
+  font-family: "Libre Baskerville", serif;
+  width: 160px;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 1125px) {
+  .scores {
+    flex-direction: row;
+    top: 0;
+    gap: 22px;
+    font-size: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 920px) {
+  #Info {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 800px) and (min-width: 565px) {
+  .board {
+    width: 65vmin;
+    height: 67vmin;
+  }
+}
+@media (max-width: 800px) {
+  .IconsContainer {
+    display: block;
+  }
+  .body {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media (max-width: 620px) {
+  #Info {
+    font-size: 10px;
+  }
+}
+@media (max-width: 400px) {
+  #Info {
+    border-radius: 0;
+  }
+}
+@media (max-width: 281px) {
+  .scores {
+    font-size: 16px;
+  }
+}
